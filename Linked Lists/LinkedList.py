@@ -1,8 +1,3 @@
-from email.policy import default
-from platform import node
-from tkinter import N
-
-
 class Node(object):
     def __init__(self, value) -> None:
         self.next: Node = None  # type: ignore
