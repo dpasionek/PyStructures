@@ -4,9 +4,9 @@ from tkinter import N
 
 
 class Node(object):
-    def __init__(self, value) -> None:
+    def __init__(self, value: object) -> None:
         self.next: Node = None  # type: ignore
-        self.value: object = value
+        self.value: str = str(value)
     def __str__(self) -> str:
         return f"Node Value: {self.value}"
 
