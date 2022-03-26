@@ -27,11 +27,17 @@ class LinkedList(object):
     def Append(self, node: Node) -> None:
         currentTail = self.tail
         self.tail = node
-        currentTail.next = node
+        if(currentTail != None):
+            currentTail.next = node
+        if(self.head == None):
+            self.head = node
     def Prepend(self, node: Node) -> None:
         currentHead = self.head
         self.head = node
-        self.head.next = currentHead
+        if(self.head != None):
+            self.head.next = currentHead
+        if(self.tail == None):
+            self.tail = currentHead
     def Insert(self, nodeToInsert: Node, nodeIndex: Node, append: bool = False) -> None: # True to append, false to Prepend
         (prevNode, node) = self.SearchByValue(nodeIndex.value)
         if(node == None):
